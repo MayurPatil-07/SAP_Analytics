@@ -23,10 +23,11 @@ public class SecurityConfig {
                 // ✅ Allow Swagger access without authentication
                 .requestMatchers(
                         "/swagger-ui/**",
-                        "/v3/api-docs/**",
                         "/swagger-ui.html",
-                        "/v3/api-docs"
+                        "/v3/api-docs/**",
+                        "/webjars/**"
                 ).permitAll()
+
 
                 // 🔐 Secure business APIs
                 .requestMatchers("/api/analytics/dashboard-summary")
